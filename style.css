@@ -8,25 +8,158 @@
 }
 
 body {
-    background: url(./img/Strip-Patterns.png) no-repeat center, url(./img/Layer-2.png);
+    background: url(./img/Strip-Patterns.png) no-repeat fixed, url(./img/Layer-2.png);
     background-size: cover;
+    display: flex;
+    flex: 1 1 100vw;
+    flex-wrap: wrap;
     /* background-position: center; */
 }
 
-header {
+header, nav, main, footer, #menu {
+    display: flex;
+    flex-wrap: wrap;
+}
 
+ul {
+    list-style: none;
+}
+
+header {
+    flex: 1 1 100vw;
+    height: 200px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0  100px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+nav {
+    width: calc((100% - 350px)/2);
+    margin: 20px;
+}
+
+header > nav> ul >li {
+    /* padding: 15px; */
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#mark{
+    display: flex;
+    background: #8468F5;
+    border-radius: 15px;
+    width: 120px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#menu {
+    width: calc(100%);
+    justify-content: space-around;
+    align-items: center;
+    
 }
 
 main {
+    flex: 20 1 100vw;
+    height: calc(100vh - 300px);
+    flex-wrap: wrap;
+    margin-left: 100px;
+}
+
+#conteudo-principal {
+    width: 45vw;
+    display: flex;
+    height: 70%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section > h1 {
+    font-weight: 700;
+    font-size: 3.8em ;
+    font-style: italic;
+}
+
+section > h1 > span{
+    color: #8468F5;
+}
+
+p {
+    font-weight: 600;
+    margin-top: 20px;
+    line-height: 25px;
+    font-size: 1.1em;
+    color: rgba(0, 0, 0, 0.562);
+}
+
+form{
+    margin-top: -250px;
+    width: 45vw;
+    position: relative;
+}
+
+input {
+    border: none;
+    margin: auto;
+    width: 70%;
+    height: 50px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.295);
+    text-indent: 30px;
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.466);
+    padding-left: 30px;
+}
+
+button {
+    border: none;
+    position: absolute;
+    top: 5px;
+    right: 260px;
+    height: 40px;
+    width: 180px;
+    border-radius: 20px;
+    background-color: #8468F5;
+    color: white;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+button i {
+    margin-left: 30px;
+}
+
+#redes-sociais {
+    height: 80%;
+}
+
+section > ul {
+    display: flex;
+    height: 100%;
+    align-items: end;
+}
+
+section > ul > li{
+    padding-right: 15px;
 
 }
 
 footer {
+    flex: 1 1 100vw;
+}
 
+footer > p {
+    margin: auto;
 }
 .animacao {
-        /* width: 400px;
-        height: 400px; */
-        /* background-color: lightblue; */
-        margin: 50px;
+       
 }
